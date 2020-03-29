@@ -1,0 +1,20 @@
+<ul>
+  <li *ngFor="
+      let student of students;
+      let i = index;
+      let l = last;
+      let f = first;
+      let par = even;
+      let impar = odd;
+    ">
+    {{i}} {{student}}
+    last: {{l}},
+    first: {{f}},
+    par: {{par}},
+    impar: {{impar}}
+    <button (click)="deleteStudent(i)">delete</button>
+  </li>
+</ul>
+
+<input type="text" [(ngModel)]="newStudent">
+<button #buttonAddStudent (click)="addStudent()">Add Student</button>
